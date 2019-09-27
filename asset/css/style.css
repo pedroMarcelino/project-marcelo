@@ -1,0 +1,26 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-control{
+    border-color: transparent;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    background: transparent;
+}
+
+.form-control:focus{ 
+    box-shadow: none;
+    border: transparent;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+
+.btn-round{
+    border-radius: 50px;
+}
+
+.hidden{
+    display: none;
+    visibility: hidden;
+}
