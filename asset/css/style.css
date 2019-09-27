@@ -16,6 +16,10 @@ body{
     background: transparent;
 }
 
+.center{
+    text-align: center;
+}
+
 .btn-round{
     border-radius: 50px;
 }
@@ -23,4 +27,24 @@ body{
 .hidden{
     display: none;
     visibility: hidden;
+}
+
+.orange{
+    color: #ff8800;
+    border-color: #ff8800;
+}
+
+.orange:hover{
+    color: #ff8800;
+    border-color: #ff8800;
+}
+
+.blue-skye{
+    color: #1792f7;
+    border-color: #1792f7;
+}
+
+.blue-skye:hover{
+    background: #1792f7;
+    color: #ffffff;
 }

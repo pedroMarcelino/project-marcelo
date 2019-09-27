@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bem Vindo - AMM</title>
+    <title>Login - AMM</title>
     <link rel="AMM icon" href="../asset/img/logo.png" >
     <?php include("../asset/includes/links.php");?>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <img src="../asset/img/logo.png" class="img-logo" alt="">
+    
     <div class="container">
         <div class="row">
             <div class="col-12 card-login">
+            <img src="../asset/img/logo.png" class="img" alt="">
                 <form id="form-login">
                     <div class="form-group">
                         <label for="input-email">Email: </label>
@@ -27,7 +28,7 @@
                         <small id="small-password" class="text-danger hidden">Preencha esse campo!</small>
                     </div>
                 </form>
-                <button id="submit" class="btn btn-outline-success btn-block btn-round">Enviar</button>
+                <button id="submit" class="btn btn-outline-default blue-skye btn-block btn-round"><i class="far fa-paper-plane"></i> Enviar</button>
                 <button id="loading" class="btn btn-outline-default orange btn-block btn-round hidden" disabled><i class="fas fa-spinner fa-spin"></i>  Carregando...</button>
                 <button id="finish" class="btn btn-outline-success btn-block btn-round hidden"><i class="fas fa-check animated slideInDown"></i></button>
                 <small>Não possui conta? Cadastre-se agora <a href="../register/register.php">clicando aqui</a></small>

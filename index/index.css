@@ -1,0 +1,43 @@
+body{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.img-index{
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+}
+
+.bg-black{
+    background: #262626;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.text-white{
+    color: white;
+    
+}
+
+.bd-black{
+    border: 1px solid #000000;
+}
+
+.mgL-px{
+    margin-left: -1px;
+}
+
+.mgT-px{
+    margin-top: -1px;
+}
+
+.input-invisible{
+    border-bottom: 0px;
+}
+
+.input-invisible:focus{
+    border-bottom: 0px;
+}

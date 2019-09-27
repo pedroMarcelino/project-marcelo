@@ -1,0 +1,36 @@
+.card-login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 550px;
+}
+
+.txt-purple{
+    color: #a51dce;
+}
+
+.center{
+    text-align: center;
+}
+
+.text-white{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.text-red{
+    color: #e30613;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.text-blue{
+    color: #00589d;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
