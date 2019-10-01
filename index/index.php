@@ -19,6 +19,7 @@
     <link rel="AMM icon" href="../asset/img/logo.png" >
     <?php include("../asset/includes/links.php");?>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <img src="../asset/img/logo.png" class="img-index" alt="AMM - Adventist motorcycle ministry">
@@ -31,268 +32,267 @@
 
         <div class="row mt-3">
             <div class="col-md-3 bd-black">
-                <label class="mb-3" for="">Regional</label>
+                <label class="mb-3 " for="input-regiao">Regional</label>
                 <input type="text" class="form-control input-invisible" id="input-regiao" placeholder="Digite a região">
             </div>
             <div class="col-md-9 bd-black bdL ">
-                <label class="mb-3" for="">Região do país</label>
+                <label class="mb-3 " for="">Região do país</label>
                 <div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="sul" name="rag.pais">
-                        <label class="custom-control-label" for="sul">sul</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="sudeste" name="rag.pais">
-                        <label class="custom-control-label" for="sudeste">Sudeste</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="centro-oeste" name="rag.pais">
-                        <label class="custom-control-label" for="centro-oeste">Centro-oeste</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="norte" name="rag.pais">
-                        <label class="custom-control-label" for="norte">Norte</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="nordeste" name="rag.pais">
-                        <label class="custom-control-label" for="nordeste">Nordeste</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="noroeste" name="rag.pais">
-                        <label class="custom-control-label" for="noroeste">Noroeste </label>
-                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="sul" name="rag.pais">
+                        <label class="radio-inline" for="sul">sul</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="sudeste" name="rag.pais">
+                        <label class="radio-inline" for="sudeste">Sudeste</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="centro-oeste" name="rag.pais">
+                        <label class="radio-inline" for="centro-oeste">Centro-oeste</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="norte" name="rag.pais">
+                        <label class="radio-inline" for="norte">Norte</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="nordeste" name="rag.pais">
+                        <label class="radio-inline" for="nordeste">Nordeste</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="noroeste" name="rag.pais">
+                        <label class="radio-inline" for="noroeste">Noroeste </label>
+                    </label>
                 </div>
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-9 bd-black">
-                <label class="mb-4" for="">Nome completo</label>
-                <input type="text" class="form-control input-invisible" id="input-nome" placeholder="Digite seu nome">
+                <label class="mb-4 " for="input-nome">Nome completo</label>
+                <input type="text" class="form-control input-invisible validation" value="" id="input-nome" placeholder="Digite seu nome">
             </div>
             <div class="col-md-3 bd-black bdL ">
-                <label class="mb-4" for="">Nome de guerra/Apelido</label>
-                <input type="text" class="form-control input-invisible" id="input-nm-guerra" placeholder="Digite seu nome de guerra">
+                <label class="mb-4 " for="input-nm-guerra">Nome de guerra/Apelido</label>
+                <input type="text" class="form-control input-invisible " value="" id="input-nm-guerra" placeholder="Digite seu nome de guerra">
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-3 bd-black">
-                <label class="mb-4" for="">RG</label>
+                <label class="mb-4 " for="input-rg">RG</label>
                 <input type="text" class="form-control input-invisible" id="input-rg" placeholder="Digite seu RG">
             </div>
 
             <div class="col-md-3 bd-black bdL ">
-                <label class="mb-4" for="">CPF</label>
+                <label class="mb-4 " for="input-cpf">CPF</label>
                 <input type="text" class="form-control input-invisible" id="input-cpf" placeholder="Digite seu CPF">
             </div>
 
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">CNH</label>
+                <label class="mb-4 " for="input-cnh">CNH</label>
                 <input type="text" class="form-control input-invisible" id="input-cnh" placeholder="Digite sua CNH">
             </div>
 
             <div class="col-md-3 bd-black bdL">  
-                <label class="mb-4" for="">Vencimento CNH</label>
+                <label class="mb-4 " for="input-venc-cnh">Vencimento CNH</label>
                 <input type="text" class="form-control input-invisible" id="input-venc-cnh" placeholder="Digite o venc. da sua CNH">
             </div>
         </div>
 
         <div class="row mgT-px">
-            <div class="col-md-2 bd-black">
-                <label class="mb-4" for="">Data de nascimento</label>
+            <div class="col-md-3 bd-black">
+                <label class="mb-4 " for="input-dt-nasc">Data de nascimento</label>
                 <input type="date" class="form-control input-invisible" id="input-dt-nasc">
             </div>
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">Naturalidade/Estado</label>
+                <label class="mb-4 " for="input-natur">Naturalidade/Estado</label>
                 <input type="text" class="form-control input-invisible" id="input-natur" placeholder="Digite sua nacionalidade/estado">
             </div>
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">Nacionalidade</label>
+                <label class="mb-4 " for="input-naciona">Nacionalidade</label>
                 <input type="text" class="form-control input-invisible" id="input-naciona" placeholder="Digite sua nacionalidade">
             </div>
-            <div class="col-md-4 bd-black bdL">
-                <label class="mb-4" for="">Estado civil</label>
+            <div class="col-md-3 bd-black bdL">
+                <label class="mb-4 " for="input-estado-civil">Estado civil</label>
                 <input type="text" class="form-control input-invisible" id="input-estado-civil" placeholder="Digite seu estado civil">
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-2 bd-black">
-                <label class="mb-4" for="">Cônjuge é membro?</label>
+                <label class="mb-4 " for="">Cônjuge é membro?</label>
                 <div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="sim" name="conj.membro">
-                        <label class="custom-control-label" for="sim">sim</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="nao" name="conj.membro">
-                        <label class="custom-control-label" for="nao">Não</label>
-                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="sim" name="conj.membro">
+                        <label class="" for="sim">sim</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="nao" name="conj.membro">
+                        <label class="" for="nao">Não</label>
+                    </label>
                 </div>
             </div>
-            <div class="col-md-10 bd-black bdL">
-                <label class="mb-4" for="">Endereço</label>
+            <div class="col-md-8 bd-black bdL">
+                <label class="mb-4 " for="input-endereco">Endereço</label>
                 <input type="text" class="form-control input-invisible" id="input-endereco" placeholder="Digite seu endereço">
+            </div>
+            <div class="col-md-2 bd-black bdL">
+                <label class="mb-4 " for="input-nr">Nº</label>
+                <input type="number" class="form-control input-invisible" id="input-nr" placeholder="Num.">
             </div>
         </div>
 
         <div class="row mgT-px">
-            <div class="col-md-1 bd-black">
-                <label class="mb-4" for="">Nº</label>
-                <input type="number" class="form-control input-invisible" id="input-nr" placeholder="Num.">
-            </div>
-
-            <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Apto. </label>
+            <div class="col-md-2 bd-black">
+                <label class="mb-4 " for="input-apto">Apto. </label>
                 <input type="number" class="form-control input-invisible" id="input-apto" placeholder="Num ap">
             </div>
 
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">Bairro</label>
+                <label class="mb-4 " for="input-bairro">Bairro</label>
                 <input type="text" class="form-control input-invisible" id="input-bairro" placeholder="Digite seu bairro">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">CEP</label>
+                <label class="mb-4 " for="input-cep">CEP</label>
                 <input type="number" class="form-control input-invisible" id="input-cep" placeholder="Digite seu CEP">
             </div>
 
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">Cidade</label>
+                <label class="mb-4 " for="input-cid">Cidade</label>
                 <input type="text" class="form-control input-invisible" id="input-cid" placeholder="Digite a cidade">
             </div>
 
-            <div class="col-md-1 bd-black bdL">
-                <label class="mb-4" for="">Estado</label>
+            <div class="col-md-2 bd-black bdL">
+                <label class="mb-4 " for="input-est">Estado</label>
                 <input type="text" class="form-control input-invisible" id="input-est" placeholder="Estado">
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-9 bd-black">
-                <label class="mb-4" for="">E-mail</label>
+                <label class="mb-4 " for="input-email">E-mail</label>
                 <input type="text" class="form-control input-invisible" id="input-email" placeholder="Digite seu e-mail">
             </div>
 
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">Fone/Whatsapp</label>
+                <label class="mb-4 " for="input-wpp">Fone/Whatsapp</label>
                 <input type="text" class="form-control input-invisible" id="input-wpp" placeholder="Digite seu fone/whatsapp">
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-3 bd-black">
-                <label class="mb-4" for="">Religião</label>
+                <label class="mb-4 " for="input-religiao">Religião</label>
                 <input type="text" class="form-control input-invisible" id="input-religiao" placeholder="Digite sua religião">
             </div>
 
             <div class="col-md-5 bd-black bdL">
-                <label class="mb-4" for="">Igreja que frequenta. Ex: Central/Nome do Bairro</label>
+                <label class="mb-4 " for="input-igr">Igreja que frequenta. Ex: Central/Nome do Bairro</label>
                 <input type="text" class="form-control input-invisible" id="input-igr" placeholder="Digite a Igreja...">
             </div>
 
             <div class="col-md-4 bd-black bdL">
-                <label class="mb-4" for="">Categoria</label>
+                <label class="mb-4 " for="">Categoria</label>
                 <div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="piloto" name="categoria">
-                        <label class="custom-control-label" for="piloto">Piloto</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="garupa" name="categoria">
-                        <label class="custom-control-label" for="garupa">Garupa</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="simpatizante" name="categoria">
-                        <label class="custom-control-label" for="simpatizante">Simpatizante</label>
-                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="piloto" name="categoria">
+                        <label class="" for="piloto">Piloto</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="garupa" name="categoria">
+                        <label class="" for="garupa">Garupa</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="simpatizante" name="categoria">
+                        <label class="" for="simpatizante">Simpatizante</label>
+                    </label>
                 </div>
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-2 bd-black">
-                <label class="mb-4" for="">Peso</label>
+                <label class="mb-4 " for="input-peso">Peso</label>
                 <input type="text" class="form-control input-invisible" id="input-peso" placeholder="Digite o Peso">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Altura</label>
+                <label class="mb-4 " for="input-altura">Altura</label>
                 <input type="text" class="form-control input-invisible" id="input-altura" placeholder="Digite sua altura">
             </div>
 
-            <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Camisa</label>
+            <div class="col-md-1 bd-black bdL">
+                <label class="mb-4 " for="input-camisa">Camisa</label>
                 <input type="text" class="form-control input-invisible" id="input-camisa" placeholder="Número da camisa">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Calça</label>
+                <label class="mb-4 " for="input-calca">Calça</label>
                 <input type="text" class="form-control input-invisible" id="input-calca" placeholder="Número da calça">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Calçado</label>
+                <label class="mb-4 " for="input-calcado">Calçado</label>
                 <input type="text" class="form-control input-invisible" id="input-calcado" placeholder="Número do calçado">
             </div>
 
-            <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Grau de Instrução</label>
+            <div class="col-md-3 bd-black bdL">
+                <label class="mb-4 " for="input-gInstrucao">Grau de Instrução</label>
                 <input type="text" class="form-control input-invisible" id="input-gInstrucao" placeholder="Grau de instrução">
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-2 bd-black">
-                <label class="mb-4" for="">Escudo</label>
+                <label class="mb-4 " for="">Escudo</label>
                 <div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="esc.sim" name="escudo">
-                        <label class="custom-control-label" for="esc.nao">Sim</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="esc.nao" name="escudo">
-                        <label class="custom-control-label" for="esc.nao">Não</label>
-                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="esc.sim" name="escudo">
+                        <label class="" for="esc.sim">Sim</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="esc.nao" name="escudo">
+                        <label class="" for="esc.nao">Não</label>
+                    </label>
                 </div>
             </div>
 
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">Data escudamento</label>
+                <label class="mb-4 " for="input-data-escudamento">Data escudamento</label>
                 <input type="date" class="form-control input-invisible" id="input-data-escudamento">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Tipo sanguíneo</label>
-                <input type="text" class="form-control input-invisible" id="input-camisa" placeholder="Tipo de sangue">
+                <label class="mb-4 " for="input-sangue">Tipo sanguíneo</label>
+                <input type="text" class="form-control input-invisible" id="input-sangue" placeholder="Tipo de sangue">
             </div>
 
             <div class="col-md-3 bd-black bdL">
-                <label class="mb-4" for="">Sexo</label>
+                <label class="mb-4 " for="">Sexo</label>
                 <div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="sex.masc" name="sexo">
-                        <label class="custom-control-label" for="esc.nao">Masc</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="sex.fem" name="sexo">
-                        <label class="custom-control-label" for="sex.fem">Fem</label>
-                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="sex.masc" name="sexo">
+                        <label class="" for="sex.masc">Masc</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="sex.fem" name="sexo">
+                        <label class="" for="sex.fem">Fem</label>
+                    </label>
                 </div>
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">É doador de orgãos</label>
+                <label class="mb-4 " for="">É doador de orgãos</label>
                 <div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="doador.sim" name="doador">
-                        <label class="custom-control-label" for="esc.nao">Sim</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="doador.nao" name="doador">
-                        <label class="custom-control-label" for="sex.fem">Não</label>
-                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="doador.sim" name="doador">
+                        <label class="" for="doador.sim">Sim</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="doador.nao" name="doador">
+                        <label class="" for="doador.nao">Não</label>
+                    </label>
                 </div>
             </div>
 
@@ -300,25 +300,25 @@
 
         <div class="row mgT-px">
             <div class="col-md-3 bd-black">
-                <label class="mb-4" for="">Vegetariano</label>
+                <label class="mb-4 " for="">Vegetariano</label>
                 <div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="veg.sim" name="veg">
-                        <label class="custom-control-label" for="esc.nao">Sim</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="veg.nao" name="veg">
-                        <label class="custom-control-label" for="sex.fem">Não</label>
-                    </div>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="veg.sim" name="veg">
+                        <label class="" for="veg.sim">Sim</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" class="" id="veg.nao" name="veg">
+                        <label class="" for="veg.nao">Não</label>
+                    </label>
                 </div>
             </div>
 
             <div class="col-md-7 bd-black bdL">
-                <label class="mb-4" for="">Restrição alimentar</label>
+                <label class="mb-4 " for="">Restrição alimentar</label>
                 <input type="text" class="form-control input-invisible" id="input-rest-alim" placeholder="Alguma restriçao Alimentar ?">
             </div>
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Alérgico a:</label>
+                <label class="mb-4 " for="">Alérgico a:</label>
                 <input type="text" class="form-control input-invisible" id="input-alergico" placeholder="Alérgico">
             </div>
         </div>
@@ -332,32 +332,32 @@
     
         <div class="row mt-3">
             <div class="col-md-2 bd-black">
-                <label class="mb-4" for="">Marca</label>
+                <label class="mb-4 " for="input-marca">Marca</label>
                 <input type="text" class="form-control input-invisible" id="input-marca" placeholder="Digite a marca">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Modelo</label>
+                <label class="mb-4 " for="input-modelo">Modelo</label>
                 <input type="text" class="form-control input-invisible" id="input-modelo" placeholder="Digite o modelo">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Ano</label>
+                <label class="mb-4 " for="input-ano">Ano</label>
                 <input type="text" class="form-control input-invisible" id="input-ano" placeholder="Digite o ano">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Cilindrada</label>
+                <label class="mb-4 " for="input-cilindrada">Cilindrada</label>
                 <input type="text" class="form-control input-invisible" id="input-cilindrada" placeholder="Digite a cilindrada">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Cor</label>
+                <label class="mb-4 " for="input-cor">Cor</label>
                 <input type="text" class="form-control input-invisible" id="input-cor" placeholder="Digite a cor">
             </div>
 
             <div class="col-md-2 bd-black bdL">
-                <label class="mb-4" for="">Placa</label>
+                <label class="mb-4 " for="input-placa">Placa</label>
                 <input type="text" class="form-control input-invisible" id="input-placa" placeholder="Digite a placa">
             </div>
         </div>
@@ -414,10 +414,46 @@
             <p><i class="fas fa-angle-right"></i> Assumoa mensalidade no valor de R$ <input type="text" class="input-line" name="" id=""> e estou ciente que a falta do pagamento
              poderá gerar sanções e disciplinas.</p>
 
-            <p><i class="fas fa-angle-right"></i> asdadasdas</p>
+            <p><i class="fas fa-angle-right"></i> Participarei assiduamente das reuniões, passeios e projetos que a regional promover.</p>
 
+            <p><i class="fas fa-angle-right"></i> Usareio uniforme adequado conforme as orientações do Manual do Uniforme.</p>
 
+            <p><i class="fas fa-angle-right"></i> Como Membro, fortalecerei este Ministério e promoverei a harmonia e união entre os colegas e respeitareia hierarquia.</p>
+
+            <p><i class="fas fa-angle-right"></i> Assumo o valor de R$ 100,00 referente a taxa de adesão que pagarei para a tesouraria REGIONAL
+             que deverá fazer o repasse à tesouraria NACIONAL.</p>
+
+            <p><i class="fas fa-angle-right"></i> Enquanto uniformizado, seguirei os preceitos da IASD.</p>
+
+            <p><i class="fas fa-angle-right"></i> Estou ciente que o AMM Brasil em sua totalidade, é composto por membros participantes em regime de voluntariado,
+            sem nenhuma remuneração e que tenha recursos para sua manutenção pessoal, familiar e de sua motocicleta.</p>
+
+            <div class="row">
+                <div class="col-md-12 mt-max center">
+                    <h4>AUTORIZAÇÃO/CESSÃO DE DIREITOS</h4>            
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <p><i class="fas fa-angle-right"></i> Autorizo ao AMM Brasile suas regionais a utilização de minha voz/imagem para fins de divulgação das atividades 
+                realizadas, considerando a veiculação em impressos, página de internet, mídias sociais, meios de comunicação e vídeos
+                institucionais que vierem a ser produzidos.</p>    
+
+                <p> Por ser verdade, assino o presente, assumindo quaisquer responsabilidade pela não veracidade destas informações.</p>
+            </div>
         </div>
+
+        <div class="row mt-max">
+                <div class="col-md-4 line-assinatura">
+                    Local e data
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4 line-assinatura">
+                    Assinatura
+                </div>
+            </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
