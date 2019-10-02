@@ -4,11 +4,10 @@
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['pass'];
-
     $password = md5($password);
 
 
-    $sql = $conn->prepare("insert into user values(null, '$name','$email','$password')");
+    $sql = $conn->prepare("insert into user(cd_user, email, pass, nome) values(null, '$email','$password','$name')");
     $return_sql = $sql->execute();
 
     if($return_sql){

@@ -77,3 +77,22 @@ body{
 .show{
     display: block;
 }
+
+.error-input{
+    border: 0px solid transparent;
+    border-bottom: 3px solid red;
+}
+
+.success-input{
+    border: 0px solid transparent;
+    border-bottom: 1px solid black;
+}
+
+.mg{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.wid-btn{
+    width: 5% !important;
+}
