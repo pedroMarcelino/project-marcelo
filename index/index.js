@@ -1,9 +1,37 @@
 $(function () {
+    var maskBehavior = function (val) {
+        return val.replace(/\D/g, '').length === 11 ? '(00) 0 0000-0000' : '(00) 0000-00009';
+    },
+        options = {
+            onKeyPress: function (val, e, field, options) {
+                field.mask(maskBehavior.apply({}, arguments), options);
+            }
+        };
+
+
     return_form();
+    $('#input-rg').mask('00.000.000-A');
+    $('#input-cpf').mask('000.000.000-00');
+    $('#input-cnh').mask('00000000000');
+    $('#input-venc-cnh').mask('00/00');
+    $('#input-dt-nasc').mask('00/00/0000');
+    $('#input-nr').mask('00000000');
+    $('#input-apto').mask('00000000');
+    $('#input-cep').mask('00000-000');
+    $('#input-wpp').mask(maskBehavior, options);
+    $('#input-peso').mask('000,0', { reverse: true });
+    $('#input-altura').mask('0,00');
+    $('#input-camisa').mask('000');
+    $('#input-calca').mask('000');
+    $('#input-calcado').mask('000');
+    $('#input-data-escudamento').mask('00/00/0000');
+    $('#input-ano').mask('0000');
+    $('#input-placa').mask('AAA-0000');
+    $('#vl_mensalidade').mask('000.000.000.000.000,00', { reverse: true });
 
     $("#enviar").click(function () {
         console.log(validation_field())
-        if (validation_field() == 46) {
+        if (validation_field() == 45) {
             if (declaracao()) {
 
                 var dados = {
@@ -56,6 +84,8 @@ $(function () {
                     "vl_mens": $("#vl_mensalidade").val(),
                 }
 
+                console.table(dados)
+
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
@@ -70,18 +100,147 @@ $(function () {
                         }
                     }
                 });
+            } else {
+                swal("EEIH", "Você precisa declarar que tudo é verdade!", "warning");
             }
+        } else {
+            swal("EEIH", "Você esqueceu algum campo verifique!", "warning");
         }
     });
 
     function return_form() {
         $.ajax({
             type: 'POST',
-            dataType: 'html',
+            dataType: 'json',
             url: 'return-form.php',
-            data: "",
+            data: '',
             success: function (data) {
-                $("#dados").html(data);
+                console.table(data);
+
+                $("#input-regiao").val(data.regional)
+                switch (data.reg_pais) {
+                    case "sul ":
+                        $('#sul').prop('checked', 'checked');
+                        break;
+                    case "sudeste ":
+                        $('#sudeste').prop('checked', 'checked');
+                        break;
+                    case "centro-oeste ":
+                        $('#centro-oeste').prop('checked', 'checked');
+                        break;
+                    case "norte ":
+                        $('#norte').prop('checked', 'checked');
+                        break;
+                    case "nordeste ":
+                        $('#nordeste').prop('checked', 'checked');
+                        break;
+                    case "noroeste ":
+                        $('#noroeste').prop('checked', 'checked');
+                        break;
+                }
+                $("#input-nome").val(data.nm_completo);
+                $("#input-nm-guerra").val(data.nm_guerra);
+                $("#input-rg").val(data.rg);
+                $("#input-cpf").val(data.cpf);
+                $("#input-cnh").val(data.cnh);
+                $("#input-venc-cnh").val(data.venc_cnh);
+                $("#input-dt-nasc").val(data.dt_nasc);
+                $("#input-natur").val(data.natu);
+                $("#input-naciona").val(data.nacio);
+                $("#input-estado-civil").val(data.est_civil);
+
+                switch (data.conj) {
+                    case "sim":
+                        // alert("entrei");
+                        $('#conjSim').prop('checked', 'checked');
+                        break;
+                    case "nao":
+                        $('#conjNao').prop('checked', 'checked');
+                        break;
+                }
+
+                $("#input-endereco").val(data.enderc);
+                $("#input-nr").val(data.num);
+                $("#input-apto").val(data.apto);
+                $("#input-bairro").val(data.bairro);
+                $("#input-cep").val(data.cep);
+                $("#input-cid").val(data.cidade);
+                $("#input-est").val(data.estado);
+                $("#input-email").val(data.email);
+                $("#input-wpp").val(data.wpp);
+                $("#input-religiao").val(data.religiao);
+                $("#input-igr").val(data.igr_frenq);
+
+                switch (data.categoria) {
+                    case "piloto":
+                        $('#conjNao').prop('checked', 'checked');
+                        break;
+                    case "garupa":
+                        $('#garupa').prop('checked', 'checked');
+                        break;
+                    case "simpatizante":
+                        $('#simpatizante').prop('checked', 'checked');
+                        break;
+                }
+
+                $("#input-peso").val(data.peso);
+                $("#input-altura").val(data.altura);
+                $("#input-camisa").val(data.camisa);
+                $("#input-calca").val(data.calca);
+                $("#input-calcado").val(data.tenis);
+                $("#input-gInstrucao").val(data.grau_instr);
+
+                switch (data.escudo) {
+                    case "sim":
+                        $('#escSim').prop('checked', 'checked');
+                        break;
+                    case "nao":
+                        $('#escNao').prop('checked', 'checked');
+                        break;
+                }
+
+                $("#input-data-escudamento").val(data.dt_escudo);
+                $("#input-sangue").val(data.tp_sangue);
+
+                switch (data.sexo) {
+                    case "masc":
+                        $('#masc').prop('checked', 'checked');
+                        break;
+                    case "fem":
+                        $('#fem').prop('checked', 'checked');
+                        break;
+                }
+
+                switch (data.doador) {
+                    case "sim":
+                        $('#doadorSim').prop('checked', 'checked');
+                        break;
+                    case "nao":
+                        $('#doadorNao').prop('checked', 'checked');
+                        break;
+                }
+
+                switch (data.vegetariano) {
+                    case "sim":
+                        $('#vegSim').prop('checked', 'checked');
+                        break;
+                    case "nao":
+                        $('#vegNao').prop('checked', 'checked');
+                        break;
+                }
+
+                $("#input-rest-alim").val(data.rest_alim);
+                $("#input-alergico").val(data.alerg);
+                $("#input-marca").val(data.marca);
+                $("#input-modelo").val(data.modelo);
+                $("#input-ano").val(data.ano);
+                $("#input-cilindrada").val(data.cilindrada);
+                $("#input-cor").val(data.cor);
+                $("#input-placa").val(data.placa);
+                $("#vl_mensalidade").val(data.vl_mensalid);
+
+                $('#declaracao').prop('checked', 'checked');
+
             }
         });
     }
@@ -140,10 +299,6 @@ $(function () {
 
     $("#input-nr").keypress(function () {
         $("label[for=input-nr]").attr("class", "mb-3 sucess show");
-    });
-
-    $("#input-apto").keypress(function () {
-        $("label[for=input-apto]").attr("class", "mb-3 sucess show");
     });
 
     $("#input-bairro").keypress(function () {
@@ -361,12 +516,6 @@ $(function () {
             i++;
         } else {
             $("label[for=input-nr]").attr("class", "mb-3 error")
-        }
-
-        if ($("#input-apto").val() != "") {
-            i++;
-        } else {
-            $("label[for=input-apto]").attr("class", "mb-3 error")
         }
 
         if ($("#input-bairro").val() != "") {
