@@ -145,7 +145,7 @@
         <div class="row mgT-px">
             <div class="col-md-2 bd-black">
                 <label class="mb-4 " for="input-apto">Apto. </label>
-                <input type="number" class="form-control input-invisible" id="input-apto" placeholder="Num ap">
+                <input type="text" class="form-control input-invisible" id="input-apto" placeholder="Num ap">
             </div>
 
             <div class="col-md-3 bd-black bdL">
