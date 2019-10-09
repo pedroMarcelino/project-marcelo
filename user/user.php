@@ -6,7 +6,6 @@
     $sql = $conn->query("select * from user where cd_user = '$code'");
     $ret = $sql->fetch(PDO::FETCH_OBJ);
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -16,12 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulário - <?php echo $ret->nome;?></title>
-    <link rel="AMM icon" href="../asset/img/logo.png" >
+    <link rel="AMM icon" href="../asset/img/logo_AMM.png" >
     <?php include("../asset/includes/links.php");?>
     <link rel="stylesheet" href="form.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 </head>
 <body>
+    <header>
+        <?php $ret->tipo == 1? include("../asset/includes/navbar.php") : include("../asset/includes/navbar-adm.php") ;?>  
+    </header>
     <img src="../asset/img/logo.png" class="img-index" alt="AMM - Adventist motorcycle ministry">
     <div class="container">
         <div class="row">

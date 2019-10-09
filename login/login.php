@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 card-login">
-            <img src="../asset/img/logo.png" class="img" alt="">
+            <img src="../asset/img/logo_AMM.png" class="img" alt="">
                 <form id="form-login">
                     <div class="form-group">
                         <label for="input-email">Email: </label>
