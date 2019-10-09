@@ -16,7 +16,7 @@
             <img src="../asset/img/logo_AMM.png" class="img" alt="">
                 <form id="form-register">
                     <div class="form-group">
-                        <label for="input-email">Nome: </label>
+                        <label for="input-email">Primeiro Nome: </label>
                         <input type="name" class="form-control input-line" id="input-name" placeholder="Digite seu nome">
                         <small id="small-name" class="text-danger hidden">Preencha esse campo!</small>
                     </div>
