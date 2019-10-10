@@ -7,7 +7,7 @@
     $password = md5($password);
 
 
-    $sql = $conn->prepare("insert into user(cd_user, email, pass, nome) values(null, '$email','$password','$name')");
+    $sql = $conn->prepare("insert into user(cd_user, email, pass, nome, tipo) values(null, '$email','$password','$name', 1)");
     $return_sql = $sql->execute();
 
     if($return_sql){

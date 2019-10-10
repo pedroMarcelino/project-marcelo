@@ -1,6 +1,11 @@
 $(function () {
     ret();
 
+    $("#excluir").on("click", function () {
+        alert("a");
+    });
+
+
     function ret() {
         $.ajax({
             url: 'function/ret-user.php',
