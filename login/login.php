@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION['code'] === NULL ? $_SESSION['code'] = NULL : header("Location: ../index/index.php"); 
+    @$_SESSION['code'] === NULL ? $_SESSION['code'] = NULL : header("Location: ../index/index.php"); 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
