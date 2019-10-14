@@ -5,6 +5,8 @@
     include("../asset/includes/conection.php");
     $sql = $conn->query("select * from user where cd_user = '$code'");
     $ret = $sql->fetch(PDO::FETCH_OBJ);
+
+    $ret->tipo == 1 ? header("Location: ../index/index.php") : $ret->tipo;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

@@ -24,25 +24,38 @@
                     <p><?php echo $ret->rg?></p>
                 </div>
             </div>
-            <div class="row btns<?php echo $ret->cd_user?>">
-                <div class="col-6">
-                    <button id="btns<?php echo $ret->cd_user?>" class="btn btn2 btn-outline-danger btn-block"><i class="fas fa-times"></i> Excluir</button>
+            <div class="btns<?php echo $ret->cd_user?>">
+                <div class="row">
+                    <div class="col-6">
+                        <button id="btns<?php echo $ret->cd_user?>" class="btn btn2 btn-outline-danger btn-block"><i class="fas fa-times"></i> Excluir</button>
+                    </div>
+                    <?php
+                        if($ret->tipo == 1){
+                    ?>
+                    <div class="col-6">
+                        <button id="adm<?php echo $ret->cd_user?>" class="btn btn-outline-primary btn-block btn-block btn-adm"><i class="fas fa-user-plus"></i> Admin</button>
+                    </div>
+                    <?php
+                        }else if ($ret->tipo == 2){
+                    ?>
+                    <div class="col-6">
+                        <button id="adm<?php echo $ret->cd_user?>" class="btn btn-outline-warning btn-block btn-block btn-user"><i class="fas fa-user-minus"></i> Usuario</button>
+                    </div>        
+                    <?php
+                        }
+                    ?>
                 </div>
-                <?php
-                    if($ret->tipo == 1){
-                ?>
-                <div class="col-6">
-                    <button class="btn btn-outline-success btn-block btn-block"><i class="fas fa-user-plus"></i> Admin</button>
+            </div>
+
+            <div class="hidden" id="conf_btn<?php echo $ret->cd_user?>">
+                <div class="row">
+                    <div class="col-6">
+                        <button id="btn<?php echo $ret->cd_user?>" class="btn btn-outline-success btn-block btn-conf"><i class="fas fa-check"></i></button>
+                    </div>
+                    <div class="col-6">
+                        <button id="btn_ancor<?php echo $ret->cd_user?>" class="btn btn-outline-danger btn-block btn-cancel"><i class="fas fa-times"></i></button>
+                    </div>
                 </div>
-                <?php
-                    }else if ($ret->tipo == 2){
-                ?>
-                <div class="col-6">
-                    <button class="btn btn-outline-warning btn-block btn-block"><i class="fas fa-user-minus"></i> Usuario</button>
-                </div>        
-                <?php
-                    }
-                ?>
             </div>
         </div>
     </div>
