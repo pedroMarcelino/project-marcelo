@@ -159,10 +159,15 @@ $(function () {
             url: 'function/alter-user.php',
             data: dados,
             success: function (data) {
+                console.log(data.igual)
                 if (data.msg == true) {
                     swal("Excluido!", "Usuário alterado com sucesso", "success");
                 } else if (data.msg == false) {
                     swal("Erro!", "Não foi possivel alterar esse usuário", "error");
+                }
+
+                if (data.igual == true) {
+                    $(location).attr('href', '../index/index.php');
                 }
             },
             complete: function () {

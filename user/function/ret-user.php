@@ -8,20 +8,20 @@
     <div class="col-md-4 mt-2">
         <div class="card">
                 <div class="col-12">
-                    <button class="btn btn-outline-primary btn-block"><i class="fas fa-eye"></i> Visializar Info</button>
+                    <a href="function/view-user.php?id=<?php echo $ret->cd_user?>"><button class="btn btn-outline-primary btn-block"><i class="fas fa-eye"></i> Visializar Info</button></a>
                 </div>
             <div class="row mt-3">
                 <div class="col-4">
-                    <p class="war-name"><?php echo $ret->nm_guerra?></p>
+                    <p class="war-name"><?php $ret->nm_guerra == ""? print"---" :print $ret->nm_guerra;?></p>
                 </div>
                 <div class="col-8">
-                    <p><?php echo $ret->wpp;?></p>
+                    <p><?php $ret->wpp == ""? print"---" :print $ret->wpp;?></p>
                 </div>
                 <div class="col-12">
                     <p><?php echo $ret->nome?> / <?php echo $ret->email?></p>
                 </div>
                 <div class="col-12 mt-2">
-                    <p><?php echo $ret->rg?></p>
+                    <p><?php $ret->rg == ""? print"---" :print $ret->rg; ?></p>
                 </div>
             </div>
             <div class="btns<?php echo $ret->cd_user?>">
