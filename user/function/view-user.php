@@ -182,77 +182,94 @@
             </div>
             <div class="col-md-8 bd-black bdL">
                 <label class="mb-4 " for="input-endereco">Endereço</label>
-                <input type="text" class="form-control input-invisible" id="input-endereco" placeholder="Digite seu endereço" value="<?php echo $ret->enderc?> >
+                <input type="text" class="form-control input-invisible" id="input-endereco" placeholder="Digite seu endereço" value="<?php echo $ret->enderc?> ">
             </div>
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-nr">Nº</label>
-                <input type="text" class="form-control input-invisible" id="input-nr" placeholder="Num.">
+                <input type="text" class="form-control input-invisible" id="input-nr" placeholder="Num." value="<?php echo $ret->num?> " >
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-2 bd-black">
                 <label class="mb-4 " for="input-apto">Apto. </label>
-                <input type="text" class="form-control input-invisible" id="input-apto" placeholder="Num ap">
+                <input type="text" class="form-control input-invisible" id="input-apto" placeholder="Num ap" value="<?php echo $ret->apto?> ">
             </div>
 
             <div class="col-md-3 bd-black bdL">
                 <label class="mb-4 " for="input-bairro">Bairro</label>
-                <input type="text" class="form-control input-invisible" id="input-bairro" placeholder="Digite seu bairro">
+                <input type="text" class="form-control input-invisible" id="input-bairro" placeholder="Digite seu bairro" value="<?php echo $ret->bairro?> ">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-cep">CEP</label>
-                <input type="text" class="form-control input-invisible" id="input-cep" placeholder="Digite seu CEP">
+                <input type="text" class="form-control input-invisible" id="input-cep" placeholder="Digite seu CEP" value="<?php echo $ret->cep?> ">
             </div>
 
             <div class="col-md-3 bd-black bdL">
                 <label class="mb-4 " for="input-cid">Cidade</label>
-                <input type="text" class="form-control input-invisible" id="input-cid" placeholder="Digite a cidade">
+                <input type="text" class="form-control input-invisible" id="input-cid" placeholder="Digite a cidade" value="<?php echo $ret->cidade?>" >
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-est">Estado</label>
-                <input type="text" class="form-control input-invisible" id="input-est" placeholder="Estado">
+                <input type="text" class="form-control input-invisible" id="input-est" placeholder="Estado" value="<?php echo $ret->estado?> ">
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-9 bd-black">
                 <label class="mb-4 " for="input-email">E-mail</label>
-                <input type="text" class="form-control input-invisible" id="input-email" placeholder="Digite seu e-mail" disabled>
+                <input type="text" class="form-control input-invisible" id="input-email" placeholder="Digite seu e-mail" disabled value="<?php echo $ret->email?> ">
             </div>
 
             <div class="col-md-3 bd-black bdL">
                 <label class="mb-4 " for="input-wpp">Fone/Whatsapp</label>
-                <input type="text" class="form-control input-invisible" id="input-wpp" placeholder="Digite seu fone/whatsapp">
+                <input type="text" class="form-control input-invisible" id="input-wpp" placeholder="Digite seu fone/whatsapp" value="<?php echo $ret->wpp?> ">
             </div>
         </div>
 
         <div class="row mgT-px">
             <div class="col-md-3 bd-black">
                 <label class="mb-4 " for="input-religiao">Religião</label>
-                <input type="text" class="form-control input-invisible" id="input-religiao" placeholder="Digite sua religião">
+                <input type="text" class="form-control input-invisible" id="input-religiao" placeholder="Digite sua religião" value="<?php echo $ret->religiao?> ">
             </div>
 
             <div class="col-md-5 bd-black bdL">
                 <label class="mb-4 " for="input-igr">Igreja que frequenta. Ex: Central/Nome do Bairro</label>
-                <input type="text" class="form-control input-invisible" id="input-igr" placeholder="Digite a Igreja...">
+                <input type="text" class="form-control input-invisible" id="input-igr" placeholder="Digite a Igreja..." value="<?php echo $ret->igr_frenq?> "> 
             </div>
+
+            <?php
+            $pil = "";
+            $gar = "";
+            $simp = "";
+                 switch($ret->categoria){
+                    case "garupa":
+                        $gar = "checked";
+                        break;
+                    case "piloto":
+                        $pil = "checked";
+                        break;
+                    case "simpatizante":
+                        $simp = "checked";
+                        break;
+                }
+            ?>
 
             <div class="col-md-4 bd-black bdL">
                 <label class="mb-3" for="categoria">Categoria</label>
                 <div>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="piloto" name="categoria" value="piloto">
+                        <input type="radio" class="" id="piloto" name="categoria" value="piloto" <?php echo $pil?>>
                         <label class="" for="piloto">Piloto</label>
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="garupa" name="categoria" value="garupa">
+                        <input type="radio" class="" id="garupa" name="categoria" value="garupa" <?php echo $gar?>>
                         <label class="" for="garupa">Garupa</label>
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="simpatizante" name="categoria" value="simpatizante">
+                        <input type="radio" class="" id="simpatizante" name="categoria" value="simpatizante" <?php echo $simp?>>
                         <label class="" for="simpatizante">Simpatizante</label>
                     </label>
                 </div>
@@ -262,45 +279,60 @@
         <div class="row mgT-px">
             <div class="col-md-2 bd-black">
                 <label class="mb-4 " for="input-peso">Peso</label>
-                <input type="text" class="form-control input-invisible"  id="input-peso" placeholder="Digite o Peso">
+                <input type="text" class="form-control input-invisible"  id="input-peso" placeholder="Digite o Peso" value="<?php echo $ret->peso?> ">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-altura">Altura</label>
-                <input type="text" class="form-control input-invisible" id="input-altura" placeholder="Digite sua altura">
+                <input type="text" class="form-control input-invisible" id="input-altura" placeholder="Digite sua altura" value="<?php echo $ret->altura?> ">
             </div>
 
             <div class="col-md-1 bd-black bdL">
                 <label class="mb-4 " for="input-camisa">Camisa</label>
-                <input type="text" class="form-control input-invisible"  id="input-camisa" placeholder="Número da camisa">
+                <input type="text" class="form-control input-invisible"  id="input-camisa" placeholder="Número da camisa" value="<?php echo $ret->camisa?> ">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-calca">Calça</label>
-                <input type="text" class="form-control input-invisible"  id="input-calca" placeholder="Número da calça">
+                <input type="text" class="form-control input-invisible"  id="input-calca" placeholder="Número da calça" value="<?php echo $ret->calca?> ">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-calcado">Calçado</label>
-                <input type="text" class="form-control input-invisible"  id="input-calcado" placeholder="Número do calçado">
+                <input type="text" class="form-control input-invisible"  id="input-calcado" placeholder="Número do calçado" value="<?php echo $ret->tenis?> ">
             </div>
 
             <div class="col-md-3 bd-black bdL">
                 <label class="mb-4 " for="input-gInstrucao">Grau de Instrução</label>
-                <input type="text" class="form-control input-invisible"  id="input-gInstrucao" placeholder="Grau de instrução">
+                <input type="text" class="form-control input-invisible"  id="input-gInstrucao" placeholder="Grau de instrução" value="<?php echo $ret->grau_instr?> ">
             </div>
         </div>
+
+        <?php
+
+            $escs  = "";
+            $escn = "";
+
+            switch($ret->escudo){
+                case "sim":
+                    $escs = "checked";
+                    break;
+                case "nao":
+                    $escn = "checked";
+                    break;
+            }
+        ?>
 
         <div class="row mgT-px">
             <div class="col-md-2 bd-black">
                 <label class="mb-3" for="escudo">Escudo</label>
                 <div>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="escSim" name="escudo" value="sim">
+                        <input type="radio" class="" id="escSim" name="escudo" value="sim" <?php echo $escs ?> >
                         <label class="" for="escSim">Sim</label>
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="escNao" name="escudo" value="nao">
+                        <input type="radio" class="" id="escNao" name="escudo" value="nao" <?php echo $escn ?>>
                         <label class="" for="escNao">Não</label>
                     </label>
                 </div>
@@ -308,37 +340,65 @@
 
             <div class="col-md-3 bd-black bdL">
                 <label class="mb-4 " for="input-data-escudamento">Data escudamento</label>
-                <input type="text" class="form-control input-invisible" id="input-data-escudamento">
+                <input type="text" class="form-control input-invisible" id="input-data-escudamento" value="<?php echo $ret->dt_escudo?> "> 
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-sangue">Tipo sanguíneo</label>
-                <input type="text" class="form-control input-invisible" id="input-sangue" placeholder="Tipo de sangue">
+                <input type="text" class="form-control input-invisible" id="input-sangue" placeholder="Tipo de sangue" value="<?php echo $ret->tp_sangue?>">
             </div>
+
+            <?php
+                $masc  = "";
+                $fem = "";
+    
+                switch($ret->sexo){
+                    case "masc":
+                        $mesc = "checked";
+                        break;
+                    case "fem":
+                        $fem = "checked";
+                        break;
+                }
+            ?>
 
             <div class="col-md-3 bd-black bdL">
                 <label class="mb-3" for="sexo">Sexo</label>
                 <div>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="masc" name="sexo" value="masc">
+                        <input type="radio" class="" id="masc" name="sexo" value="masc" <?php echo $masc?>>
                         <label class="" for="masc">Masc</label>
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="fem" name="sexo" value="fem">
+                        <input type="radio" class="" id="fem" name="sexo" value="fem" <?php echo $fem?>>
                         <label class="" for="fem">Fem</label>
                     </label>
                 </div>
             </div>
 
+            <?php
+                $ds  = "";
+                $dn = "";
+    
+                switch($ret->doador){
+                    case "sim":
+                        $ds = "checked";
+                        break;
+                    case "nao":
+                        $dn = "checked";
+                        break;
+                }
+            ?>
+
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-3" for="doador">É doador de orgãos</label>
                 <div>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="doadorSim" name="doador" value="sim">
+                        <input type="radio" class="" id="doadorSim" name="doador" value="sim" <?php echo $ds?>>
                         <label class="" for="doadorSim">Sim</label>
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="doadorNao" name="doador" value="nao">
+                        <input type="radio" class="" id="doadorNao" name="doador" value="nao" <?php echo $dn?>>
                         <label class="" for="doadorNao">Não</label>
                     </label>
                 </div>
@@ -346,16 +406,30 @@
 
         </div>
 
+        <?php
+            $vs  = "";
+            $vn = "";
+
+            switch($ret->vegetariano){
+                case "sim":
+                    $vs = "checked";
+                    break;
+                case "nao":
+                    $vn = "checked";
+                    break;
+            }
+        ?>
+
         <div class="row mgT-px">
             <div class="col-md-3 bd-black">
                 <label class="mb-3" for="veg">Vegetariano</label>
                 <div>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="vegSim" name="veg" value="sim">
+                        <input type="radio" class="" id="vegSim" name="veg" value="sim" <?php echo $vs?>>
                         <label class="" for="veg.sim">Sim</label>
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" class="" id="vegNao" name="veg" value="nao">
+                        <input type="radio" class="" id="vegNao" name="veg" value="nao" <?php echo $vn?>>
                         <label class="" for="veg.nao">Não</label>
                     </label>
                 </div>
@@ -363,11 +437,11 @@
 
             <div class="col-md-7 bd-black bdL">
                 <label class="mb-4 " for="input-rest-alim">Restrição alimentar</label>
-                <input type="text" class="form-control input-invisible"  id="input-rest-alim" placeholder="Alguma restriçao Alimentar ?">
+                <input type="text" class="form-control input-invisible"  id="input-rest-alim" placeholder="Alguma restriçao Alimentar ?" value="<?php echo $ret->rest_alim?>">
             </div>
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-alergico">Alérgico a:</label>
-                <input type="text" class="form-control input-invisible"  id="input-alergico" placeholder="Alérgico">
+                <input type="text" class="form-control input-invisible"  id="input-alergico" placeholder="Alérgico" value="<?php echo $ret->alerg?>">
             </div>
         </div>
         
@@ -381,38 +455,38 @@
         <div class="row mt-3">
             <div class="col-md-2 bd-black">
                 <label class="mb-4 " for="input-marca">Marca</label>
-                <input type="text" class="form-control input-invisible"  id="input-marca" placeholder="Digite a marca">
+                <input type="text" class="form-control input-invisible"  id="input-marca" placeholder="Digite a marca"  value="<?php echo $ret->marca?>">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-modelo">Modelo</label>
-                <input type="text" class="form-control input-invisible"  id="input-modelo" placeholder="Digite o modelo">
+                <input type="text" class="form-control input-invisible"  id="input-modelo" placeholder="Digite o modelo"  value="<?php echo $ret->modelo?>">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-ano">Ano</label>
-                <input type="text" class="form-control input-invisible"  id="input-ano" placeholder="Digite o ano">
+                <input type="text" class="form-control input-invisible"  id="input-ano" placeholder="Digite o ano"  value="<?php echo $ret->ano?>">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-cilindrada">Cilindrada</label>
-                <input type="text" class="form-control input-invisible"  id="input-cilindrada" placeholder="Digite a cilindrada">
+                <input type="text" class="form-control input-invisible"  id="input-cilindrada" placeholder="Digite a cilindrada" value="<?php echo $ret->cilindrada?>">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-cor">Cor</label>
-                <input type="text" class="form-control input-invisible"  id="input-cor" placeholder="Digite a cor">
+                <input type="text" class="form-control input-invisible"  id="input-cor" placeholder="Digite a cor"  value="<?php echo $ret->cor?>">
             </div>
 
             <div class="col-md-2 bd-black bdL">
                 <label class="mb-4 " for="input-placa">Placa</label>
-                <input type="text" class="form-control input-invisible"  id="input-placa" placeholder="Digite a placa">
+                <input type="text" class="form-control input-invisible"  id="input-placa" placeholder="Digite a placa"  value="<?php echo $ret->placa?>">
             </div>
         </div>
         
         <div class="row mt-2">
             <div class="">
-                <input type="checkbox" name="declaracao" id="declaracao">
+                <input type="checkbox" name="declaracao" id="declaracao" checked>
             </div>
             <div class="col-md-11">
                 <p id="declaracao">Declaro serem verdadeiras todas as informações acima. Assumundo a responsabilidade pelas mesmas.</p>
@@ -460,7 +534,7 @@
             <p><i class="fas fa-angle-right"></i> Estou ciente que o escudo, colete e a bandeira, são símbolos máximos no motoclubismo.
              Caso me desligue, independente do motivo, concordo em devolver os escudos do meu colete a diretoria regional.</p>
 
-            <p><i class="fas fa-angle-right"></i> Assumoa mensalidade no valor de R$ <input type="text"  class="input-line" name="vl_mensalidade" id="vl_mensalidade"> e estou ciente que a falta do pagamento
+            <p><i class="fas fa-angle-right"></i> Assumoa mensalidade no valor de R$ <input type="text"  class="input-line" name="vl_mensalidade" id="vl_mensalidade" value="<?php echo $ret->vl_mensalid?>"> e estou ciente que a falta do pagamento
              poderá gerar sanções e disciplinas.</p>
 
             <p><i class="fas fa-angle-right"></i> Participarei assiduamente das reuniões, passeios e projetos que a regional promover.</p>
@@ -504,7 +578,6 @@
         </form>
         <div class="row  mt-5">
             <div class="col-md-3">
-                <button id="enviar" class="btn btn-outline-success"><i class="far fa-paper-plane"></i> Enviar</button>
                 <button id="imprimir" class="btn btn-outline-primary"><i class="fas fa-print"></i> Imprimir</button>
             </div>
         </div>

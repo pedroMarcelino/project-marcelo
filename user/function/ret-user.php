@@ -33,13 +33,13 @@
                         if($ret->tipo == 1){
                     ?>
                     <div class="col-6">
-                        <button id="adm<?php echo $ret->cd_user?>" class="btn btn-outline-primary btn-block btn-block btn-adm"><i class="fas fa-user-plus"></i> Admin</button>
+                        <button id="adm<?php echo $ret->cd_user?>" class="btn btn-outline-primary btn-block btn-block btn-adm"><i class="fas fa-user-plus"></i>Tornar Admin</button>
                     </div>
                     <?php
                         }else if ($ret->tipo == 2){
                     ?>
                     <div class="col-6">
-                        <button id="adm<?php echo $ret->cd_user?>" class="btn btn-outline-warning btn-block btn-block btn-user"><i class="fas fa-user-minus"></i> Usuario</button>
+                        <button id="adm<?php echo $ret->cd_user?>" class="btn btn-outline-warning btn-block btn-block btn-user"><i class="fas fa-user-minus"></i>Tornar Usu.</button>
                     </div>        
                     <?php
                         }
