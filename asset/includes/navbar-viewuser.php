@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-sm bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-sm bg-light container-fluid">
+    <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="../../index/index.php"><img class="img-logo-nav" src="../../asset/img/logo_AMM_2.png" alt="AMM"> </a>

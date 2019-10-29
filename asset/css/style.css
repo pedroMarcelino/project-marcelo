@@ -59,3 +59,7 @@ body{
 .exit:hover{
     color: #ad0606;
 }
+
+.link-none:hover{
+    text-decoration:none; 
+}

@@ -22,5 +22,21 @@
     <header>
         <?php $ret->tipo == 1? include("../asset/includes/navbar.php") : include("../asset/includes/navbar-adm.php") ;?>
     </header>
+    <div class="container">
+        <div class="row">   
+            <div class="col-md-3">
+                <a class="link-none" href="../form/form.php"><div class="box center">
+                    <p class="">Meu Formulário</p>
+                    <i class="far fa-file-alt wd-more"></i>
+                </div></a>
+            </div>
+            <div class="col-md-3">
+                <a class="link-none" href="../user/user.php"><div class="box center">
+                    <p class="">Listar Usuários</p>
+                    <i class="fas fa-users wd-more"></i>
+                </div></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
