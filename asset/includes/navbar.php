@@ -7,9 +7,9 @@
         </ul>
         <div class="justify-content-end">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link sair" href="../form/form.php"><i class="far fa-file-alt"></i> Formulário</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link exit" href="../exit_session.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
                 </li>

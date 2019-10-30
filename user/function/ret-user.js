@@ -69,13 +69,14 @@ $(function () {
             v[i] = id_element.charAt(i)
         }
 
-        for (var i = 3; i < id_element.length; i++) {
+        for (var i = 8; i < id_element.length; i++) {
             id_descontruido += v[i];
         }
 
         var dados = {
             "cd": id_descontruido,
         }
+        console.log(id_element);
 
         $.ajax({
             type: 'POST',
@@ -113,6 +114,8 @@ $(function () {
         var dados = {
             "cd": id_descontruido,
         }
+
+        console.log(id_descontruido)
 
 
         $.ajax({

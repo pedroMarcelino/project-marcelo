@@ -30,12 +30,18 @@
                     <i class="far fa-file-alt wd-more"></i>
                 </div></a>
             </div>
+            <?php
+                if($ret->tipo == 2){
+            ?>
             <div class="col-md-3">
                 <a class="link-none" href="../user/user.php"><div class="box center">
                     <p class="">Listar Usuários</p>
                     <i class="fas fa-users wd-more"></i>
                 </div></a>
             </div>
+            <?php
+                }
+            ?>
         </div>
     </div>
 </body>
