@@ -72,13 +72,13 @@
         echo json_encode($array);
     }
     
-    // $sql_email = $conn->prepare("select nome from user where cd_user = '$cod'");
-    // $sql_email->execute();
+    $sql_email = $conn->prepare("select nome from user where cd_user = '$cod'");
+    $sql_email->execute();
 
-    // $email = $sql_email->fetch(PDO::FETCH_OBJ);
+    $email = $sql_email->fetch(PDO::FETCH_OBJ);
     
-    // $to = "marceloesposito@me.com"; 
-    // $assunto = "Cadastro  via AMM";
-    // $menssagem = "O $email->nome, acabou de efetuar um cadatro"
-    // $menssagem = ("Nome: " . $email->nome . "\n" . "Email: " . $email . "\n\n" . $menssagem);
-    // $menssagem = str_replace("\n.", "\n..", $menssagem);
+    $to = "marceloesposito@me.com"; 
+    $assunto = "Cadastro  via AMM";
+    $menssagem = "O $email->nome, acabou de efetuar um cadatro"
+    $menssagem = ("Nome: " . $email->nome . "\n" . "Email: " . $email . "\n\n" . $menssagem);
+    $menssagem = str_replace("\n.", "\n..", $menssagem);

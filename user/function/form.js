@@ -7,4 +7,7 @@ $(function () {
         $("nav").attr("class", "navbar navbar-expand-sm bg-light");
         $("#imprimir").attr("class", "btn btn-outline-primary");
     });
+
+    console.log($("input").attr("disabled", "true"));
 });
+
