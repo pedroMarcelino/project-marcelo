@@ -143,6 +143,10 @@ function register_ajax() {
                 swal("Oops!", "Ocorreu um erro, tente novamente!", "warning");
                 $("#loading").attr("class", "btn btn-outline-defalt orange btn-block btn-round hidden");
                 $("#submit").attr("class", "btn btn-outline-default blue-skye btn-block btn-round");
+            } else if (data.return == "email_invalid") {
+                swal("Oops!", "Usuário já cadastrado, tente outro email", "warning");
+                $("#loading").attr("class", "btn btn-outline-defalt orange btn-block btn-round hidden");
+                $("#submit").attr("class", "btn btn-outline-default blue-skye btn-block btn-round");
             }
         },
     });
